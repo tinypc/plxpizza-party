@@ -77,9 +77,9 @@ html, body {
 
 .confetti-particle {
   position: absolute;
-  width: 16px; /* Adjust the width of the confetti particles */
-  height: 16px; /* Adjust the height of the confetti particles */
-  background-image: url('images/favicon-16x16.png'); /* Make sure the path is correct */
+  width: 32px; /* Adjust the width of the confetti particles */
+  height: 32px; /* Adjust the height of the confetti particles */
+  background-image: url('images/favicon-32x32.png'); /* Make sure the path is correct */
   background-size: cover;
   pointer-events: none; /* Prevent confetti particles from interfering with clicks */
   z-index: 9999; /* Ensure the confetti particles appear on top */
@@ -91,10 +91,23 @@ html, body {
   transform: translateX(-50%) rotate(0deg);
 
   /* New animation properties */
-  animation: confetti-fall linear forwards; /* Remove duration from the animation */
+ /* animation: confetti-fall linear forwards; /* Remove duration from the animation */
 }
 
 @keyframes confetti-fall {
+  0% {
+    top: -100px; /* Start position at the bottom of the container */
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    top: 110%; /* End position at the top of the container */
+    left: calc(100% * var(--random-left)); /* Move to a random position between 0% and 100% */
+    transform: translateX(-50%) rotate(180deg);
+  }
+}
+
+@keyframes confetti-launch {
   0% {
     top: 100%; /* Start position at the bottom of the container */
     left: 50%;

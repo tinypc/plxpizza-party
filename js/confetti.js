@@ -1,5 +1,5 @@
 function createConfetti() {
-  const confettiCount = 200; // Adjust the number of confetti particles
+  const confettiCount = 25; // Adjust the number of confetti particles
   const confettiContainer = document.querySelector('.confetti-container');
   const containerWidth = confettiContainer.offsetWidth;
 
@@ -12,7 +12,12 @@ function createConfetti() {
     const randomLeft = Math.random(); // Random value between 0 and 1 for left position
     const animationDuration = Math.random() * 1 + 1; // Random duration between 1 and 2 seconds
 
-    confetti.style.animation = `confetti-fall ${animationDuration}s linear forwards`; // Random animation duration
+	const randomDirection = Math.random();
+	if(randomDirection > 0.5) {
+		confetti.style.animation = `confetti-fall ${animationDuration}s linear forwards`; // Random animation duration
+	} else {
+		confetti.style.animation = `confetti-launch ${animationDuration}s linear forwards`; // Random animation duration
+	}
     confetti.style.transform = `rotate(${rotate}deg)`;
     confetti.style.setProperty('--random-left', randomLeft); // Set a custom CSS variable for random left position
 
