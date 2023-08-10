@@ -129,3 +129,28 @@ html, body {
     transform: translateX(-50%) rotate(180deg);
   }
 }
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+  text-align: right;
+  z-index: 999;
+  position: absolute;
+  height: 100%;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+  background-color: red;
+  font-size: 4em;
+  
+  top: 80%;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
