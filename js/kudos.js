@@ -94,7 +94,6 @@ function marqueeString() {
 
 function titleString () {
 	var domain = new URL(window.location.href).hostname;
-	domain = 'petespizza.party';
 	console.log(domain);
 	var title = 'Welcome to the<BR>Pizza Party!';
 	
