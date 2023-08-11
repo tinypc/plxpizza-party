@@ -47,11 +47,24 @@ var kudos = [
 		"nominee": "Ryan Poppe",
 		"dateAction": "2023-08-08",
 		"details": "Ryan recommended I test 2 specific use cases (check other manufacturers, and check the 'Fetch Tree…' button) after some changes I made to Scan Settings UI which led to me discovering other underlying problems with the change I had made and how we are recreating the folder structure, which made our code more resilient and error-proof",
-		"team": ‘Print Logix’,
+		"team": 'Print Logix',
 		"manager": "Peter Conway",
 		"submittedByManager": "Peter Conway",
-		"details": "recommending I test 2 specific use cases, uncovering another underlying problem"
-}
+		"summary": "recommending I test 2 specific use cases, uncovering another underlying problem"
+},
+{
+	"wowWeek": 1,
+	"wow": "No",
+	"submittedBy": "Jack Saller",
+		"dateSubmitted": "2023-08-11",
+		"nominee": "Chris Coleman, Daniel Fackrell, Shawn Wonder, Larry Rich",
+		"dateAction": "2023-08-04",
+		"summary": "Spending multiple days troubleshooting and fixing a very difficult issue for LHM",
+		"team": 'Print Logix',
+		"manager": "Peter Conway",
+		"submittedByManager": "Peter Conway",
+		"details": "LHM discovered an issue the week of August 4th, and the nominees spent multiple full days troubleshooting, brainstorming, and coming up with a solution that would resolve their issue, with minimal impact to LHM's day-to-day"
+	}
    
 ];
 
