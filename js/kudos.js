@@ -72,8 +72,10 @@ function marqueeString() {
 		  filteredResults = kudos;
 	}
 		
+	var wowWinners = 0;
 	var karray =  filteredResults.map(kudo => { 
 	if (kudo.wowWinner.toLowerCase() =='yes') {
+		wowWinners++;
 		return `<span class='wow'> On ${kudo.dateAction} ${kudo.nominee} WOWed us by ${kudo.summary}!</span>`
 	} else {
 		return ` On ${kudo.dateAction} ${kudo.nominee} impressed us by ${kudo.summary}!` 
