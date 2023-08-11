@@ -46,7 +46,7 @@ var kudos = [
 		"dateSubmitted": "2023-08-11",
 		"nominee": "Ryan Poppe",
 		"dateAction": "2023-08-08",
-		"details": "Ryan recommended I test 2 specific use cases (check other manufacturers, and check the "Fetch Tree…" button) after some changes I made to Scan Settings UI which led to me discovering other underlying problems with the change I had made and how we are recreating the folder structure, which made our code more resilient and error-proof",
+		"details": "Ryan recommended I test 2 specific use cases (check other manufacturers, and check the 'Fetch Tree…' button) after some changes I made to Scan Settings UI which led to me discovering other underlying problems with the change I had made and how we are recreating the folder structure, which made our code more resilient and error-proof",
 		"team": ‘Print Logix’,
 		"manager": "Peter Conway",
 		"submittedByManager": "Peter Conway",
