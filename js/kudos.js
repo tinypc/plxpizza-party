@@ -1,6 +1,6 @@
 var kudos = [
    {
-		"sender": "Three",
+		"submittedBy": "George",
 		"dateSubmitted": "2023-08-19",
 		"nominee": "Chris C.",
 		"dateAction": "2023-08-10",
@@ -11,18 +11,18 @@ var kudos = [
 		"manager": "Bob"
    },
    {
-		"sender": "One",
+		"submittedBy": "Peter",
 		"dateSubmitted": "2023-08-14",
 		"nominee": "Jack S.",
 		"dateAction": "2023-08-08",
 		"summary": "leading a thing to accomplish that feature",
 		"wowWinner": "Yes",
 		"wowWeek": 2,
-		"team": 'OTG',
+		"team": 'PLX',
 		"manager": "Peter"
    },
    {
-		"sender": "Two",
+		"submittedBy": "Chris",
 		"dateSubmitted": "2023-08-01",
 		"nominee": "Bryce D.",
 		"dateAction": "2023-08-10",
@@ -31,7 +31,30 @@ var kudos = [
 		"wowWeek": 1,
 		"team": 'PLX',
 		"manager": "Peter"
-   }   
+   },
+   {
+		"submittedBy": "George",
+		"dateSubmitted": "2023-08-01",
+		"nominee": "Larry R.",
+		"dateAction": "2023-08-10",
+		"summary": "solving a tough one",
+		"wowWinner": "Yes",
+		"wowWeek": 2,
+		"team": 'OTG',
+		"manager": "Peter"
+   }  ,
+   {
+		"submittedBy": "Jack",
+		"dateSubmitted": "2023-08-01",
+		"nominee": "Bryce D.",
+		"dateAction": "2023-08-10",
+		"summary": "just living the dream",
+		"wowWinner": "No",
+		"wowWeek": 1,
+		"team": 'MWP',
+		"manager": "Tom"
+   }  
+   
 ];
 
 function marqueeString() {
