@@ -4,144 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to the PLX Pizza Party!</title>
-  <!-- <link rel="stylesheet" href="css/styles.css">  -->
+  <link rel="stylesheet" href="css/styles.css"> 
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link href="https://fonts.googleapis.com/css2?family=borel&display=swap" rel="stylesheet">
   <link rel="manifest" href="site.webmanifest">
   <style>
-    @font-face {
-	font-family: 'pizza-party'; 
-	src: url('fonts/KaushanScript-Regular.otf') format('opentype'); 
-	}
-	
-	body {
-	  font-family: 'Tahoma', sans-serif; 
-	}
-
-	html, body {
-	  margin: 0;
-	  padding: 0;
-	  height: 100%;
-	}
-
-	.overlay {
-	  position: absolute;
-	  width: 100%;
-	  height: 100%;
-	  background-image: url('images/pizza-slice.jpg'); 
-	  background-color: black;
-	  background-size: cover;
-	}
-	.darken {
-	  position: absolute;
-	  width: 100%;
-	  height: 100%;
-	  background-color: black;
-	  opacity: 0.0;
-	}
-
-	.darken:hover {
-		background-color: black;
-		opacity: 0.5;
-		transition: opacity 5s ease;
-		cursor: pointer;  
-	}
-
-	.marquee-container {
-	  position: absolute;
-	  width: 100%;
-	  overflow: hidden;
-	  text-align: left;
-	  top: 0;
-	  height:100%;
-	}
-
-	.marquee {
-	  display: inline-block;
-	  white-space: nowrap;
-	  animation: marquee linear infinite;
-	  font-size: 4em;
-	  top: 80%;
-	  position: relative;
-	  color: white;
-	  text-align:left;
-	}
-
-	@keyframes marquee {
-	  0% { transform: translateX(1000px); }
-	  100% { transform: translateX(-100%); }
-	}	
-	
-	.marquee:hover {
-	  animation-play-state: paused;
-	}
-
-.confetti-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; 
-  z-index: 9999;
-  overflow: hidden; 
-}
-
-.confetti-particle {
-  position: absolute;
-  width: 32px; 
-  height: 32px; 
-  background-image: url('images/favicon-32x32.png');
-  background-size: cover;
-  pointer-events: none; 
-  z-index: 9999; 
-
-
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%) rotate(0deg);
-}
-
-@keyframes confetti-fall {
-  0% {
-    top: -100px; /* Start position at the bottom of the container */
-    left: 50%;
-    transform: translateX(-50%) rotate(0deg);
-  }
-  100% {
-    top: 110%; /* End position at the top of the container */
-    left: calc(100% * var(--random-left)); /* Move to a random position between 0% and 100% */
-    transform: translateX(-50%) rotate(180deg);
-  }
-}
-
-@keyframes confetti-launch {
-  0% {
-    top: 100%; /* Start position at the bottom of the container */
-    left: 50%;
-    transform: translateX(-50%) rotate(0deg);
-  }
-  100% {
-    top: -100px; /* End position at the top of the container */
-    left: calc(100% * var(--random-left)); /* Move to a random position between 0% and 100% */
-    transform: translateX(-50%) rotate(180deg);
-  }
-}
-
-#title {
-  position: relative;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -30%);
-  font-size: 5rem;
-  color: rgba(255, 240, 197, 0.6);
-  text-align: center;
-  font-family: 'pizza-party', fantasy;
-  opacity:1.0;
-}
-
+    
   </style>
 </head>
 <body>

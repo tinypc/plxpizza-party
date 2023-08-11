@@ -1,78 +1,69 @@
 @font-face {
-  font-family: 'pizza-party'; 
-  src: url('../fonts/KaushanScript-Regular.otf') format('opentype'); 
- }
+	font-family: 'pizza-party'; 
+	src: url('fonts/KaushanScript-Regular.otf') format('opentype'); 
+	}
+	
+	body {
+	  font-family: 'Tahoma', sans-serif; 
+	}
 
-body {
-  font-family: 'YourFontName', sans-serif; /* Use the font for the whole page or specific elements */
-}
+	html, body {
+	  margin: 0;
+	  padding: 0;
+	  height: 100%;
+	}
 
+	.overlay {
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  background-image: url('images/pizza-slice.jpg'); 
+	  background-color: black;
+	  background-size: cover;
+	}
+	.darken {
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  background-color: black;
+	  opacity: 0.0;
+	}
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
+	.darken:hover {
+		background-color: black;
+		opacity: 0.5;
+		transition: opacity 5s ease;
+		cursor: pointer;  
+	}
 
-.overlay {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-image: url('../images/pizza-slice.jpg'); 
-  background-size: cover;
-}
-/*
-.overlay::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.03); 
-}
-*/
+	.marquee-container {
+	  position: absolute;
+	  width: 100%;
+	  overflow: hidden;
+	  text-align: left;
+	  top: 0;
+	  height:100%;
+	}
 
-#title {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -30%);
-  font-size: 5rem;
-  color: rgba(255, 240, 197, 0.6);
-  text-align: center;
-  font-family: 'pizza-party', fantasy;
-}
+	.marquee {
+	  display: inline-block;
+	  white-space: nowrap;
+	  animation: marquee linear infinite;
+	  font-size: 4em;
+	  top: 80%;
+	  position: relative;
+	  color: white;
+	  text-align:left;
+	}
 
-.fade-in-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    font-size: 24px;
-    color: white;
-    background-color: rgba(0, 0, 0, 1.0);
-    transition: opacity 5s ease;
-	cursor: pointer;
-}
-
-.fade-in-text:hover {
-  opacity: 0.7;
-  transition: opacity .5s ease;
-}
-
-.fade-in-text:hover .fade-in-text {
-  transition-delay: 0.5s;
-}
-.overlay:hover .fade-in-text {
-    opacity: 0.5;
-	transition: opacity 1.5s ease;
-}
+	@keyframes marquee {
+	  0% { transform: translateX(1000px); }
+	  100% { transform: translateX(-100%); }
+	}	
+	
+	.marquee:hover {
+	  animation-play-state: paused;
+	}
 
 .confetti-container {
   position: fixed;
@@ -80,28 +71,24 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Prevent confetti container from blocking clicks on other elements */
-  z-index: 9999; /* Make sure the confetti is on top of other content */
-  overflow: hidden; /* Hide any overflowing particles */
+  pointer-events: none; 
+  z-index: 9999;
+  overflow: hidden; 
 }
 
 .confetti-particle {
   position: absolute;
-  width: 32px; /* Adjust the width of the confetti particles */
-  height: 32px; /* Adjust the height of the confetti particles */
-  background-image: url('images/favicon-32x32.png'); /* Make sure the path is correct */
+  width: 32px; 
+  height: 32px; 
+  background-image: url('images/favicon-32x32.png');
   background-size: cover;
-  pointer-events: none; /* Prevent confetti particles from interfering with clicks */
-  z-index: 9999; /* Ensure the confetti particles appear on top */
+  pointer-events: none; 
+  z-index: 9999; 
 
 
-  /* New styles to position the particles randomly */
   top: 100%;
   left: 50%;
   transform: translateX(-50%) rotate(0deg);
-
-  /* New animation properties */
- /* animation: confetti-fall linear forwards; /* Remove duration from the animation */
 }
 
 @keyframes confetti-fall {
@@ -130,27 +117,24 @@ html, body {
   }
 }
 
-.marquee-container {
-  width: 100%;
-  overflow: hidden;
-  background-color: black;
-  text-align: right;
-  z-index: 999;
-  position: absolute;
-  height: 100%;
+#title {
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  font-size: 5rem;
+  color: rgba(255, 240, 197, 0.6);
+  text-align: center;
+  font-family: 'pizza-party', fantasy;
+  opacity:1.0;
+}
+.wow {
+  color: yellow;
+  animation: wow 1s step-start infinite;
 }
 
-.marquee {
-  display: inline-block;
-  white-space: nowrap;
-  animation: marquee 10s linear infinite;
-  background-color: red;
-  font-size: 4em;
-  
-  top: 80%;
-}
-
-@keyframes marquee {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+@keyframes wow {
+  50% {
+    opacity: 0;
+  }
 }
