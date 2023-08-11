@@ -101,7 +101,7 @@ function marqueeString() {
 	} else {
 		return ` On ${kudo.dateAction} ${kudo.nominee} impressed us by ${kudo.summary}!` 
 	}});
-	var dets = karray.join(" 🍕 ");
+	var dets = karray.join(" 🍕 "); 
 	var marquee = document.getElementById('kudos');
 	marquee.innerHTML = dets;
 	
