@@ -38,6 +38,19 @@ var kudos = [
   "manager": "Matt Dean",
   "submittedByManager": "Peter Conway",
   "details": "Brendan is still pretty new and is our only intern currently.  But he is a rockstar.  He is constantly working on something to improve our QA and Dev experience and he does it without being prompted.  He thinks of things that would make life easier and just goes out and figures out how to make it happen."
+},
+{
+	"wowWeek": 1,
+	"wow": "No",
+	"submittedBy": "Jack Saller",
+		"dateSubmitted": "2023-08-11",
+		"nominee": "Ryan Poppe",
+		"dateAction": "2023-08-08",
+		"details": "Ryan recommended I test 2 specific use cases (check other manufacturers, and check the "Fetch Tree…" button) after some changes I made to Scan Settings UI which led to me discovering other underlying problems with the change I had made and how we are recreating the folder structure, which made our code more resilient and error-proof",
+		"team": ‘Print Logix’,
+		"manager": "Peter Conway",
+		"submittedByManager": "Peter Conway",
+		"details": "recommending I test 2 specific use cases, uncovering another underlying problem"
 }
    
 ];
@@ -85,9 +98,9 @@ function marqueeString() {
 	var karray =  filteredResults.map(kudo => { 
 	if (kudo.wow.toLowerCase() =='yes') {
 		wows++;
-		return `<span class='wow'> ${kudo.dateAction} ${kudo.nominee} WOWed us by ${kudo.summary}!</span>`
+		return `<span class='wow'> ${kudo.dateAction} ${kudo.nominee} WOWed us by ${kudo.summary}! <small>-- ${kudo.submittedBy}<small></span>`
 	} else {
-		return ` ${kudo.dateAction} ${kudo.nominee} impressed us by ${kudo.summary}!` 
+		return ` ${kudo.dateAction} ${kudo.nominee} impressed us by ${kudo.summary}! <small>-- ${kudo.submittedBy}<small>` 
 	}});
 
 	var dets = karray.join(" 🍕 ");
