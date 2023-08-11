@@ -71,10 +71,10 @@ function marqueeString() {
 		  break;
 		case 'plxpizza.party': // PLX only
 		case 'plx.pizza': // PLX only
-		  filteredResults = kudos.filter(function (entry) { return entry.team === 'PLX' });
+		  filteredResults = kudos.filter(function (entry) { return (entry.team === 'PLX') || (entry.team === 'Print Logix') });
 		  break;
 		case 'petespizza.party': // Peter's direct reports
-		  filteredResults = kudos.filter(function(entry) { return entry.manager === 'Peter' });
+		  filteredResults = kudos.filter(function(entry) { return (entry.manager === 'Peter') || (entry.manager === 'Pete') || (entry.manager === 'Peter Conway') || (entry.manager==='Pete Conway') });
 		  break;
 		case 'vasion.party': // everything submitted
 		default:
@@ -85,9 +85,9 @@ function marqueeString() {
 	var karray =  filteredResults.map(kudo => { 
 	if (kudo.wow.toLowerCase() =='yes') {
 		wows++;
-		return `<span class='wow'> On ${kudo.dateAction} ${kudo.nominee} WOWed us by ${kudo.summary}!</span>`
+		return `<span class='wow'> ${kudo.dateAction} ${kudo.nominee} WOWed us by ${kudo.summary}!</span>`
 	} else {
-		return ` On ${kudo.dateAction} ${kudo.nominee} impressed us by ${kudo.summary}!` 
+		return ` ${kudo.dateAction} ${kudo.nominee} impressed us by ${kudo.summary}!` 
 	}});
 
 	var dets = karray.join(" 🍕 ");
