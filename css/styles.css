@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'pizza-party'; 
-	src: url('fonts/KaushanScript-Regular.otf') format('opentype'); 
+	src: url('../fonts/KaushanScript-Regular.otf') format('opentype'); 
 	}
 	
 	body {

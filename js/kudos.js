@@ -54,8 +54,6 @@ function marqueeString() {
 	
 	
 	var domain = new URL(window.location.href).hostname;
-	domain = 'vasion.party';
-	console.log(domain);
 	
 	// the assumption is that the visitor is accessing based on the team/group desired
 	var filteredResults;
@@ -94,11 +92,10 @@ function marqueeString() {
 
 function titleString () {
 	var domain = new URL(window.location.href).hostname;
-	console.log(domain);
 	var title = 'Welcome to the<BR>Pizza Party!';
 	
 	// the assumption is that the visitor is accessing based on the team/group desired
-	var filteredResults;
+	var title;
 	switch (domain) {
 		case 'plxpizza.party': // PLX only
 		case 'plx.pizza': // PLX only
