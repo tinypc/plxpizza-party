@@ -125,6 +125,9 @@ function titleString () {
 	// the assumption is that the visitor is accessing based on the team/group desired
 	var title;
 	switch (domain) {
+		case 'otgpizza.party': 
+		  title = 'OTG<BR>Pizza Party!';
+		  break;
 		case 'plxpizza.party': // PLX only
 		case 'plx.pizza': // PLX only
 		  title = 'PLX<BR>Pizza Party!';
