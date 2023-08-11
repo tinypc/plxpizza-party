@@ -109,23 +109,30 @@ function titleString () {
 	
 	// the assumption is that the visitor is accessing based on the team/group desired
 	var title;
+	var pageTitle; 
 	switch (domain) {
 		case 'otgpizza.party': 
 		  title = 'OTG<BR>Pizza Party!';
+		  pageTitle = 'Welcome to the OTG Pizza Party!';
 		  break;
 		case 'plxpizza.party': // PLX only
 		case 'plx.pizza': // PLX only
 		  title = 'PLX<BR>Pizza Party!';
+		  pageTitle = 'Welcome to the PLX Pizza Party!';
 		  break;
 		case 'petespizza.party': // Peter's direct reports
 		  title = "Pete's Pizza<BR>Party!";
+		  pageTitle = "Welcome to Pete's Pizza Party!";
 		  break;
 		case 'vasion.party': // everything submitted
 		default:
 		  title = 'Welcome to the<br>Pizza Party!';
+		  pageTitle = 'Welcome to the Vasion Pizza Party!';
 	}
 	var div = document.getElementById('title');
 	div.innerHTML= title;
+	document.title = pageTitle;
+	
 }
 
 marqueeString();
