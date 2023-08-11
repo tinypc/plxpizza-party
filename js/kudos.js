@@ -1,14 +1,16 @@
 var kudos = [
    {
-		"submittedBy": "George",
-		"dateSubmitted": "2023-08-19",
-		"nominee": "Chris C.",
-		"dateAction": "2023-08-10",
-		"summary": "do something amazing",
-		"wowWinner": "No",
-		"wowWeek": 2,
-		"team": 'PLX',
-		"manager": "Bob"
+		"submittedBy": "Chris Coleman",
+		"dateSubmitted": "8/11/2023",
+		"nominee": "Shawn Wonder",
+		"dateAction": "Last Week",
+		"summary": "always being the first to help.",
+		"team": 'Print Logix',
+		"manager": "Peter Conway",
+		"submittedByManager": "Peter Conway",
+		"details": "We had a blocking bug with a big customer that took 5 days to complete. Every time I asked for help in the channel, Shawn would show up first and do everything he could to solve the problem."
+		"wow": "Yes",
+		"wowWeek": 1
    },
    {
 		"submittedBy": "Peter",
@@ -16,7 +18,7 @@ var kudos = [
 		"nominee": "Jack S.",
 		"dateAction": "2023-08-08",
 		"summary": "leading a thing to accomplish that feature",
-		"wowWinner": "Yes",
+		"wow": "Yes",
 		"wowWeek": 2,
 		"team": 'PLX',
 		"manager": "Peter"
@@ -27,7 +29,7 @@ var kudos = [
 		"nominee": "Bryce D.",
 		"dateAction": "2023-08-10",
 		"summary": "surviving a marathon customer call",
-		"wowWinner": "No",
+		"wow": "No",
 		"wowWeek": 1,
 		"team": 'PLX',
 		"manager": "Peter"
@@ -38,7 +40,7 @@ var kudos = [
 		"nominee": "Larry R.",
 		"dateAction": "2023-08-10",
 		"summary": "solving a tough one",
-		"wowWinner": "Yes",
+		"wow": "Yes",
 		"wowWeek": 2,
 		"team": 'OTG',
 		"manager": "Peter"
@@ -49,7 +51,7 @@ var kudos = [
 		"nominee": "Bryce D.",
 		"dateAction": "2023-08-10",
 		"summary": "just living the dream",
-		"wowWinner": "No",
+		"wow": "No",
 		"wowWeek": 1,
 		"team": 'MWP',
 		"manager": "Tom"
@@ -60,7 +62,7 @@ var kudos = [
 function marqueeString() {
 	
 	kudos.sort((a,b) => { 
-		if (a.wowWinner===b.wowWinner) {
+		if (a.wow===b.wow) {
 			if (a.wowWeek === b.wowWeek) {
 				if (a.dateAction === b.dateAction) {
 					if (a.dateSubmitted === b.dateSubmitted) {
@@ -72,7 +74,7 @@ function marqueeString() {
 			} 
 			return a.wowWeek > b.wowWeek ? 1: -1;
 		}
-		return a.wowWinner > b.wowWinner ? -1: 1;
+		return a.wow > b.wow ? -1: 1;
 	});
 	
 	
@@ -81,6 +83,9 @@ function marqueeString() {
 	// the assumption is that the visitor is accessing based on the team/group desired
 	var filteredResults;
 	switch (domain) {
+		case 'otgpizza.party': // OTG
+		  filteredResults = kudos.filter(function (entry) { return entry.team === 'OTG' });
+		  break;
 		case 'plxpizza.party': // PLX only
 		case 'plx.pizza': // PLX only
 		  filteredResults = kudos.filter(function (entry) { return entry.team === 'PLX' });
@@ -93,15 +98,15 @@ function marqueeString() {
 		  filteredResults = kudos;
 	}
 		
-	var wowWinners = 0;
+	var wows = 0;
 	var karray =  filteredResults.map(kudo => { 
-	if (kudo.wowWinner.toLowerCase() =='yes') {
-		wowWinners++;
+	if (kudo.wow.toLowerCase() =='yes') {
+		wows++;
 		return `<span class='wow'> On ${kudo.dateAction} ${kudo.nominee} WOWed us by ${kudo.summary}!</span>`
 	} else {
 		return ` On ${kudo.dateAction} ${kudo.nominee} impressed us by ${kudo.summary}!` 
 	}});
-	var dets = karray.join(" || ");
+	var dets = karray.join(" 🍕 ");
 	var marquee = document.getElementById('kudos');
 	marquee.innerHTML = dets;
 	
