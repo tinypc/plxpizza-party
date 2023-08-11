@@ -111,9 +111,9 @@ function marqueeString() {
 	var karray =  filteredResults.map(kudo => { 
 	if (kudo.wow.toLowerCase() =='yes') {
 		wows++;
-		return `<span class='wow'> ${kudo.dateAction} ${kudo.nominee} WOWed us by ${kudo.summary}! <small>-- ${kudo.submittedBy}<small></span>`
+		return `<span class='wow'> ${kudo.dateAction} ${kudo.nominee} WOWed us by ${kudo.summary}! <small><small>-- ${kudo.submittedBy}</small></small></span>`
 	} else {
-		return ` ${kudo.dateAction} ${kudo.nominee} impressed us by ${kudo.summary}! <small>-- ${kudo.submittedBy}<small>` 
+		return ` ${kudo.dateAction} ${kudo.nominee} impressed us by ${kudo.summary}! <small><small>-- ${kudo.submittedBy}</small></small>` 
 	}});
 
 	var dets = karray.join(" 🍕 ");
