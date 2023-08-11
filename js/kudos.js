@@ -8,20 +8,22 @@ var kudos = [
 		"team": 'Print Logix',
 		"manager": "Peter Conway",
 		"submittedByManager": "Peter Conway",
-		"details": "We had a blocking bug with a big customer that took 5 days to complete. Every time I asked for help in the channel, Shawn would show up first and do everything he could to solve the problem."
+		"details": "We had a blocking bug with a big customer that took 5 days to complete. Every time I asked for help in the channel, Shawn would show up first and do everything he could to solve the problem.",
 		"wow": "Yes",
 		"wowWeek": 1
    },
    {
-		"submittedBy": "Peter",
-		"dateSubmitted": "2023-08-14",
-		"nominee": "Jack S.",
-		"dateAction": "2023-08-08",
-		"summary": "leading a thing to accomplish that feature",
+	  "submittedBy": "Donald Riedl",
+	  "dateSubmitted": "2023-08-11",
+	  "nominee": "Mychal Smith",
+	  "dateAction": "2023-08-03",
+	  "summary": "Very quickly contributing to automation",
+	  "team": "OMg",
+	  "manager": "Simon",
+	  "submittedByManager": "Peter Conway",
+	  "details": "Mychal just started a couple of weeks ago but quickly started working on automation.  I gave him a quick overview of the repo and not long after he put up his first PR.  Since then he has been very invested in improving his code and suggesting improvements for our processes.",
 		"wow": "Yes",
-		"wowWeek": 2,
-		"team": 'PLX',
-		"manager": "Peter"
+		"wowWeek": 1	  
    },
    {
 		"submittedBy": "Chris",
