@@ -1,10 +1,10 @@
 var kudos = [
    {
 		"submittedBy": "Chris Coleman",
-		"dateSubmitted": "8/11/2023",
+		"dateSubmitted": "2023-08-11",
 		"nominee": "Shawn Wonder",
 		"dateAction": "Last Week",
-		"summary": "always being the first to help.",
+		"summary": "always being the first to help",
 		"team": 'PLX',
 		"manager": "Peter Conway",
 		"submittedByManager": "Peter Conway",
@@ -17,7 +17,7 @@ var kudos = [
 	  "dateSubmitted": "2023-08-11",
 	  "nominee": "Mychal Smith",
 	  "dateAction": "2023-08-03",
-	  "summary": "Very quickly contributing to automation",
+	  "summary": "very quickly contributing to automation",
 	  "team": "OMg",
 	  "manager": "Simon",
 	  "submittedByManager": "Peter Conway",
@@ -25,47 +25,28 @@ var kudos = [
 		"wow": "Yes",
 		"wowWeek": 1	  
    },
-   {
-		"submittedBy": "Chris",
-		"dateSubmitted": "2023-08-01",
-		"nominee": "Bryce D.",
-		"dateAction": "2023-08-10",
-		"summary": "surviving a marathon customer call",
-		"wow": "No",
-		"wowWeek": 1,
-		"team": 'PLX',
-		"manager": "Peter"
-   },
-   {
-		"submittedBy": "George",
-		"dateSubmitted": "2023-08-01",
-		"nominee": "Larry R.",
-		"dateAction": "2023-08-10",
-		"summary": "solving a tough one",
-		"wow": "Yes",
-		"wowWeek": 2,
-		"team": 'OTG',
-		"manager": "Peter"
-   }  ,
-   {
-		"submittedBy": "Jack",
-		"dateSubmitted": "2023-08-01",
-		"nominee": "Bryce D.",
-		"dateAction": "2023-08-10",
-		"summary": "just living the dream",
-		"wow": "No",
-		"wowWeek": 1,
-		"team": 'MWP',
-		"manager": "Tom"
-   }  
+{
+	
+	"wowWeek": 1,
+	"wow": "No",
+  "submittedBy": "Donald Riedl",
+  "dateSubmitted": "2023-08-11",
+  "nominee": "Brendan Davidson",
+  "dateAction": "2023-08-04",
+  "summary": "Constantly finding ways to improve our processes",
+  "team": "MWP",
+  "manager": "Matt Dean",
+  "submittedByManager": "Peter Conway",
+  "details": "Brendan is still pretty new and is our only intern currently.  But he is a rockstar.  He is constantly working on something to improve our QA and Dev experience and he does it without being prompted.  He thinks of things that would make life easier and just goes out and figures out how to make it happen."
+}
    
 ];
 
 function marqueeString() {
 	
 	kudos.sort((a,b) => { 
-		if (a.wow===b.wow) {
-			if (a.wowWeek === b.wowWeek) {
+		if (a.wowWeek===b.wowWeek) {
+			if (a.wow === b.wow) {
 				if (a.dateAction === b.dateAction) {
 					if (a.dateSubmitted === b.dateSubmitted) {
 						return a.nominee > b.nominee ? -1:1;
@@ -74,9 +55,9 @@ function marqueeString() {
 				}
 				return a.dateAction > b.dateAction  ? -1: 1;
 			} 
-			return a.wowWeek > b.wowWeek ? 1: -1;
+			return a.wow > b.wow ? -1: 1;
 		}
-		return a.wow > b.wow ? -1: 1;
+		return a.wowWeek > b.wowWeek ? 1: -1;
 	});
 	
 	
