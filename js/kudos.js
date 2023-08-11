@@ -5,7 +5,7 @@ var kudos = [
 		"nominee": "Shawn Wonder",
 		"dateAction": "Last Week",
 		"summary": "always being the first to help.",
-		"team": 'Print Logix',
+		"team": 'PLX',
 		"manager": "Peter Conway",
 		"submittedByManager": "Peter Conway",
 		"details": "We had a blocking bug with a big customer that took 5 days to complete. Every time I asked for help in the channel, Shawn would show up first and do everything he could to solve the problem.",
