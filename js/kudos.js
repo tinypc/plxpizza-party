@@ -205,6 +205,9 @@ function marqueeString() {
 	var textWidth = m.scrollWidth;
 	var duration = textWidth/200;
 	m.style.animationDuration = duration + 's';
+	
+	document.documentElement.style.setProperty('--marqueeZero', (window.innerWidth + 100)+ 'px');
+	document.documentElement.style.setProperty('--marquee100', (-1 * textWidth) + 'px');
 }
 
 function titleString () {
@@ -236,7 +239,6 @@ function titleString () {
 	var div = document.getElementById('title');
 	div.innerHTML= title;
 	document.title = pageTitle;
-	
 }
 
 marqueeString();
