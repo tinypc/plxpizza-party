@@ -27,6 +27,7 @@
 	  height: 100%;
 	  background-color: black;
 	  opacity: 0.0;
+	  overflow: hidden;
 	}
 
 	.darken:hover {
@@ -39,21 +40,23 @@
 	.marquee-container {
 	  position: absolute;
 	  width: 100%;
-	  overflow: hidden;
 	  text-align: left;
 	  top: 0;
 	  height:100%;
+	  display: flex;
 	}
 
 	.marquee {
 	  display: inline-block;
 	  white-space: nowrap;
 	  animation: marquee linear infinite;
-	  font-size: 4em;
-	  top: 80%;
+	  font-size: 1.5em;
+	  top: 50%;
 	  position: relative;
 	  color: white;
 	  text-align:left;
+	  display: flex;
+	  justify-content: space-between;
 	}
 
 	@keyframes marquee {
@@ -137,4 +140,26 @@
   50% {
     opacity: 0;
   }
+}
+
+.mpanel {
+  padding: 4px;
+  float:left;
+  text-wrap:wrap;
+  text-size:1rem;
+  min-width:20%;
+  max-width:50%;
+}
+.wpanel {
+  width: 20%;
+  border: 1px solid red;
+  padding: 4px;
+  text-wrap:wrap;
+  float:left;
+}
+.mdivider {
+  float:left;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 3rem;
 }

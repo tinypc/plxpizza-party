@@ -64,6 +64,19 @@ var kudos = [
 		"manager": "Peter Conway",
 		"submittedByManager": "Peter Conway",
 		"details": "LHM discovered an issue the week of August 4th, and the nominees spent multiple full days troubleshooting, brainstorming, and coming up with a solution that would resolve their issue, with minimal impact to LHM's day-to-day"
+	},
+	{
+	"wowWeek": 1,
+	"wow": "No",
+		"submittedBy": "Daniel Fackrell",
+		"dateSubmitted": "2023-08-11",
+		"nominee": "Jack Saller",
+		"dateAction": "2023-08-01",
+		"summary": "providing TypesScript training",
+		"team": 'PLX',
+		"manager": "Peter Conway",
+		"submittedByManager": "Peter Conway",
+		"details": "Jack led out on providing an initial training session on TypeScript"
 	}
    
 ];
@@ -111,12 +124,12 @@ function marqueeString() {
 	var karray =  filteredResults.map(kudo => { 
 	if (kudo.wow.toLowerCase() =='yes') {
 		wows++;
-		return `<span class='wow'> ${kudo.dateAction} ${kudo.nominee} WOWed us by ${kudo.summary}! <small><small>-- ${kudo.submittedBy}</small></small></span>`
+		return `<div class='mpanel wow'>${kudo.dateAction} ${kudo.nominee} WOWed us by ${kudo.summary}! <small><small>-- ${kudo.submittedBy}</small></small></div>`
 	} else {
-		return ` ${kudo.dateAction} ${kudo.nominee} impressed us by ${kudo.summary}! <small><small>-- ${kudo.submittedBy}</small></small>` 
+		return ` <div class='mpanel'>${kudo.dateAction} ${kudo.nominee} impressed us by ${kudo.summary}! <small><small>-- ${kudo.submittedBy}</small></small></div>` 
 	}});
 
-	var dets = karray.join(" 🍕 ");
+	var dets = karray.join("<div class='mdivider'>🍕</div>");
 
 	var marquee = document.getElementById('kudos');
 	marquee.innerHTML = dets;
