@@ -57,13 +57,16 @@
 	  text-align:left;
 	  display: flex;
 	  justify-content: space-between;
-	  overflow: none;
 	  width: fit-content;
 	}
 
+:root {
+	--marqueeZero: 1000px;
+	--marquee100: -200%;
+}
 	@keyframes marquee {
-	  0% { transform: translateX(1000px); }
-	  100% { transform: translateX(-100%); }
+	  0% { transform: translateX(var(--marqueeZero)); }
+	  100% { transform: translateX(var(--marquee100)); }
 	}	
 	
 	.marquee:hover {
