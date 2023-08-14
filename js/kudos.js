@@ -9,7 +9,7 @@ var kudos = [
 		"manager": "Peter Conway",
 		"submittedByManager": "Peter Conway",
 		"details": "We had a blocking bug with a big customer that took 5 days to complete. Every time I asked for help in the channel, Shawn would show up first and do everything he could to solve the problem.",
-		"wow": "Yes",
+		"wow": "No",
 		"wowWeek": 1
    },
    {
@@ -22,7 +22,7 @@ var kudos = [
 	  "manager": "Simon",
 	  "submittedByManager": "Peter Conway",
 	  "details": "Mychal just started a couple of weeks ago but quickly started working on automation.  I gave him a quick overview of the repo and not long after he put up his first PR.  Since then he has been very invested in improving his code and suggesting improvements for our processes.",
-		"wow": "Yes",
+		"wow": "No",
 		"wowWeek": 1	  
    },
 {
@@ -54,10 +54,10 @@ var kudos = [
 },
 {
 	"wowWeek": 1,
-	"wow": "No",
+	"wow": "Yes",
 	"submittedBy": "Jack Saller",
 		"dateSubmitted": "2023-08-11",
-		"nominee": "Chris Coleman, Daniel Fackrell, Shawn Wonder, Larry Rich",
+		"nominee": "Chris Coleman, Daniel Fackrell, Shawn Wonder, and Larry Rich",
 		"dateAction": "2023-08-04",
 		"summary": "Spending multiple days troubleshooting and fixing a very difficult issue for LHM",
 		"team": 'Print Logix',
