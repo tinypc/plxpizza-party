@@ -57,6 +57,7 @@
 	  text-align:left;
 	  display: flex;
 	  justify-content: space-between;
+	  overflow: auto;
 	}
 
 	@keyframes marquee {
@@ -146,16 +147,19 @@
   padding: 4px;
   float:left;
   text-wrap:wrap;
-  text-size:1rem;
   min-width:20%;
   max-width:50%;
+  overflow: auto;
+  height: fit-content;
 }
 .wpanel {
-  width: 20%;
-  border: 1px solid red;
   padding: 4px;
-  text-wrap:wrap;
   float:left;
+  text-wrap:wrap;
+  min-width:20%;
+  max-width:50%;
+  overflow: auto;
+  height: fit-content;
 }
 .mdivider {
   float:left;
