@@ -77,6 +77,71 @@ var kudos = [
 		"manager": "Peter Conway",
 		"submittedByManager": "Peter Conway",
 		"details": "Jack led out on providing an initial training session on TypeScript"
+	},
+	{
+	"wowWeek": 2,
+	"wow": "No",
+		"submittedBy": "OTG Retro",
+		"dateSubmitted": "2023-08-14",
+		"nominee": "Chad Sillitoe",
+		"dateAction": "2023-08-14",
+		"summary": "creating a framework for the team instead of just a ticket target",
+		"team": 'OTG',
+		"manager": "Peter Conway",
+		"submittedByManager": "Peter Conway",
+		"details": "Chad is creating a framework for testing."
+	},
+	{
+	"wowWeek": 2,
+	"wow": "Yes",
+		"submittedBy": "OTG Retro",
+		"dateSubmitted": "2023-08-14",
+		"nominee": "Kit Robinson",
+		"dateAction": "2023-08-11",
+		"summary": "wrapping up the feature-flag related blocking customer bug",
+		"team": 'OTG',
+		"manager": "Peter Conway",
+		"submittedByManager": "Peter Conway",
+		"details": ""
+	},
+	{
+	"wowWeek": 2,
+	"wow": "Yes",
+		"submittedBy": "OTG Retro",
+		"dateSubmitted": "2023-08-14",
+		"nominee": "Carlos Alvarado",
+		"dateAction": "2023-08-11",
+		"summary": "wrapping up the feature-flag related blocking customer bug",
+		"team": 'OTG',
+		"manager": "Peter Conway",
+		"submittedByManager": "Peter Conway",
+		"details": ""
+	},
+	{
+	"wowWeek": 2,
+	"wow": "No",
+		"submittedBy": "OTG Retro",
+		"dateSubmitted": "2023-08-14",
+		"nominee": "Phil Clayton",
+		"dateAction": "2023-08-11",
+		"summary": "getting all the tickets that were in testing moving to done-done",
+		"team": 'OTG',
+		"manager": "Peter Conway",
+		"submittedByManager": "Peter Conway",
+		"details": ""
+	},
+	{
+	"wowWeek": 2,
+	"wow": "No",
+		"submittedBy": "OTG Retro",
+		"dateSubmitted": "2023-08-14",
+		"nominee": "Peter Conway",
+		"dateAction": "2023-08-11",
+		"summary": "giving kudos visibility",
+		"team": 'OTG',
+		"manager": "Troy Campbell",
+		"submittedByManager": "Peter Conway",
+		"details": ""
 	}
    
 ];
@@ -96,7 +161,7 @@ function marqueeString() {
 			} 
 			return a.wow > b.wow ? -1: 1;
 		}
-		return a.wowWeek > b.wowWeek ? 1: -1;
+		return a.wowWeek > b.wowWeek ? -1: 1;
 	});
 	
 	

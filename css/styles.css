@@ -51,13 +51,14 @@
 	  white-space: nowrap;
 	  animation: marquee linear infinite;
 	  font-size: 1.5em;
-	  top: 50%;
+	  top: 67%;
 	  position: relative;
 	  color: white;
 	  text-align:left;
 	  display: flex;
 	  justify-content: space-between;
-	  overflow: auto;
+	  overflow: none;
+	  width: fit-content;
 	}
 
 	@keyframes marquee {
