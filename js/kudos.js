@@ -186,15 +186,64 @@ function marqueeString() {
 	}
 		
 	var wows = 0;
+	var id = 0;
+	var csv = [];
+	var csvText = '';
+	var csvArray = [];
+	
 	var karray =  filteredResults.map(kudo => { 
 	if (kudo.wow.toLowerCase() =='yes') {
 		wows++;
+		csv.push(++id);
+		csv.push(`${kudo.submittedBy}`);
+		csv.push(`${kudo.dateSubmitted}`);
+		csv.push(`${kudo.nominee}`);
+		csv.push(`${kudo.nomineee}`);
+		csv.push(`${kudo.dateAction}`);
+		csv.push(`${kudo.dateAction}`);
+		csv.push(`${kudo.team}`);
+		csv.push(`${kudo.manager}`);
+		csv.push(`${kudo.team}`);
+		csv.push(`${kudo.submittedByManager}`);
+		csv.push(`${kudo.summary}`);
+		csv.push(`${kudo.details}`);
+		csv.push(`${kudo.wowWeek}`);
+		csv.push(`${kudo.wow}`);
+		csv.push(0);
+		
+		csvArray.push(csv);
+		csv = [];
+		
 		return `<div class='mpanel wow'>${kudo.dateAction} ${kudo.nominee} WOWed us by ${kudo.summary}! <small><small>-- ${kudo.submittedBy}</small></small></div>`
 	} else {
-		return ` <div class='mpanel'>${kudo.dateAction} ${kudo.nominee} impressed us by ${kudo.summary}! <small><small>-- ${kudo.submittedBy}</small></small></div>` 
+		wows++;
+		csv.push(++id);
+		csv.push(`${kudo.submittedBy}`);
+		csv.push(`${kudo.dateSubmitted}`);
+		csv.push(`${kudo.nominee}`);
+		csv.push(`${kudo.nomineee}`);
+		csv.push(`${kudo.dateAction}`);
+		csv.push(`${kudo.dateAction}`);
+		csv.push(`${kudo.team}`);
+		csv.push(`${kudo.manager}`);
+		csv.push(`${kudo.team}`);
+		csv.push(`${kudo.submittedByManager}`);
+		csv.push(`${kudo.summary}`);
+		csv.push(`${kudo.details}`);
+		csv.push(`${kudo.wowWeek}`);
+		csv.push(`${kudo.wow}`);
+		csv.push(0);
+		
+		csvArray.push(csv);
+		csv = [];
+	
+	return ` <div class='mpanel'>${kudo.dateAction} ${kudo.nominee} impressed us by ${kudo.summary}! <small><small>-- ${kudo.submittedBy}</small></small></div>` 
 	}});
 
 	var dets = karray.join("<div class='mdivider'>🍕</div>");
+	csvText = csvArray.join('XXX');
+	
+	console.log(csvText);
 
 	var marquee = document.getElementById('kudos');
 	marquee.innerHTML = dets;
