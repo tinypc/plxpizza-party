@@ -142,6 +142,18 @@ var kudos = [
 		"manager": "Troy Campbell",
 		"submittedByManager": "Peter Conway",
 		"details": ""
+	},
+{"wowWeek": 4,
+	"wow": "No",
+		"submittedBy": "Phil Clayton",
+		"dateSubmitted": "2023-08-25",
+		"nominee": "Carlos Alvarado",
+		"dateAction": "2023-08-24",
+		"summary": "Helped me test OFN on iOS on VA using a simulator.",
+		"team": "OTG",
+		"manager": "Peter Conway",
+		"submittedByManager": "Peter Conway",
+		"details": "Seems like I've been blocked for many days but no longer! Thank you thank you thank you, Carlos!"
 	}
    
 ];
